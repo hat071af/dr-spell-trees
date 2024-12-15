@@ -6,7 +6,7 @@ graph Necromancer_Spells {
 // Two spell slots   &#9724;&#9724;&#9723;
 // Three spell slots &#9724;&#9724;&#9724;
 // Four spell slots  &#9724;&#9724;&#9724;&#9724;
-  bgcolor="invis"
+//   bgcolor="invis"
 //   node [shape=record style="filled,rounded" color=white fontname = "helvetica" fixedsize=shape fixedsize=true height=.85 width=2.45];
   node [shape=record style="filled,rounded" color=white fontname = "helvetica" fixedsize=shape];
   graph [fontname = "helvetica" fontsize="20pt"];
