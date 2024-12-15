@@ -1,0 +1,276 @@
+graph Necromancer_Spells {
+//   label="Necromancer Spells"
+//   labelloc="t"
+//   fontsize="30pt"
+// One spell slot    &#9724;&#9723;&#9723;
+// Two spell slots   &#9724;&#9724;&#9723;
+// Three spell slots &#9724;&#9724;&#9724;
+// Four spell slots  &#9724;&#9724;&#9724;&#9724;
+  bgcolor="invis"
+//   node [shape=record style="filled,rounded" color=white fontname = "helvetica" fixedsize=shape fixedsize=true height=.85 width=2.45];
+  node [shape=record style="filled,rounded" color=white fontname = "helvetica" fixedsize=shape];
+  graph [fontname = "helvetica" fontsize="20pt"];
+  edge [fontname = "helvetica"];
+  rankdir=LR;
+  subgraph cluster_5 {
+    // style=filled;
+    peripheries=0
+    // fontcolor=grey
+    node[color=grey];
+    rank="max";
+    obf [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Obfuscation</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Obfuscation"]
+    vod [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Visions of Darkness</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Visions_of_Darkness"]
+    pv [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Petrifying Visions</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Petrifying_Visions"]
+    eotb [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Eyes of the Blind</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Requires VOD or PV</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Eyes_of_the_Blind"]
+    rog [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Rite of Grace</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Rite_of_Grace"]
+    roc [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Rite of Contrition</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Rite_of_Contrition"]
+    liturgy [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Liturgy</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Metaspell</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Liturgy"]
+    // corruption -- obf [style=invis];
+    obf -- vod;
+    obf -- pv;
+    vod -- eotb [style=dashed];
+    pv -- eotb [style=dashed];
+    eotb -- roc;
+    eotb -- rog;
+    roc -- liturgy;
+    rog -- liturgy;
+  }
+    subgraph cluster_4 {
+    // rank="same";
+    peripheries=0
+    fontcolor=red;
+    node [color=red;]
+    // label = <<B>Blood Magic</B>>;
+    hp [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Heighten Pain</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Heighten_Pain"]
+    sv [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Siphon Vitality</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Siphon_Vitality"]
+    cf [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Consume Flesh</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 15</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Consume_Flesh"]
+    resection [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Resection</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 15</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Resection"]
+    devour [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Devour</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 50</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9724;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Devour"]
+    blb [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Blood Burst</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Blood_Burst"]
+    hp -- sv -- cf -- devour;
+    cf -- resection;
+    hp -- blb;
+  }
+    subgraph cluster_3 {
+    // rank="same";
+    peripheries=0
+    fontcolor="#3386ff";
+    node[color="#3386ff";]
+    // label = <<B>Anabasis</B>>;
+    ebots [label=<<TABLE CELLSPACING="1" BORDER="0">
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Ebon Blood of the Scorpion</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Metaspell</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9724;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Ebon_Blood_of_the_Scorpion"]
+    solace [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Solace</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 10</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Solace_(spell)"]
+    rof [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Rite of Forebearance</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Rite_of_Forbearance"]
+    emc [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Emuin's Candlelight</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Emuin%27s_Candlelight"]
+    bb [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Book Burning</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Book_Burning"]
+    relight [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Relight</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 50</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9724;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Relight"]
+    // anabasis -- solace [style=invis];
+    solace -- emc -- ebots;
+    solace -- rof;
+    emc -- relight;
+    emc -- bb;
+  }
+    subgraph cluster_2 {
+    peripheries=0
+    fontcolor=cyan;
+    node [color=cyan;]
+    // rank="same";
+    // label = <<B>Synthetic Creation</B>>;
+    acs [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Acid Splash</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Acid_Splash"]
+    rei [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Researcher's Insight</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9724;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Researcher%27s_Insight"]
+    php [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Philosopher's Preservation</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9724;&#9724;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Philosopher%27s_Preservation"]
+    vs [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Viscous Solution</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Viscous_Solution"]
+    usol [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Universal Solvent</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 80</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Universal_Solvent"]
+    vivi [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Vivisection</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 40</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Vivisection"]
+    alk [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Alkahest Edge</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Metaspell</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Alkahest_Edge"]
+    // syntheticcreation -- acs [style=invis]
+    acs -- vs -- usol;
+    acs -- vivi -- alk;
+    acs -- rei -- php;
+  }
+    subgraph cluster_1 {
+    peripheries=0
+    fontcolor=pink;
+    node [color=pink;]
+    // rank="same";
+    // label = <<B>Transcendental Necromancy</B>>;
+    ivm [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Ivory Mask</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> Requires two of: ACS, HP, <BR />or Obfuscation</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Ivory_Mask"]
+    ks [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Kura-Silma</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Kura-Silma"]
+    bue [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Butcher's Eye</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Butcher%27s_Eye"]
+    ch [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Calcified Hide</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Requires BUE or KS</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Calcified_Hide"]
+    wm [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Worm's Mist</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Requires BUE or KS</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Worm%27s_Mist"]
+    chir [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Chirugia</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Metaspell</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Chirurgia"]
+    // transnecro -- ivm [style=invis]
+    ivm -- ks;
+    ivm -- bue -- chir;
+    bue -- ch [style=dashed];
+    ks -- ch [style=dashed];
+    bue -- wm [style=dashed];
+    ks -- wm [style=dashed];
+  }
+    subgraph cluster_0 {
+    rank="same";
+    peripheries=0
+    fontcolor=yellow;
+    node [color=yellow;]
+    // label = <<B>Animation</B>>;
+    qe [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Quicken the Earth</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 5</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Quicken_the_Earth"]
+    nr [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Necrotic Reconstruction</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Necrotic_Reconstruction"]
+    sre [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Spiteful Rebirth</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Metaspell</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Spiteful_Rebirth"]
+    cre [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Covetous Rebirth</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Metaspell</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9723;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Covetous_Rebirth"]
+    cfb [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Call from Beyond</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10">Circle 20</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9724;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Call_from_Beyond"]
+    rpu [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Reverse Putrefaction</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9724;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Reverse_Putrefaction"]
+    cfw [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Call from Within</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9724;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Call_from_Within"]
+    ghoulflesh [label=<<TABLE>
+      <TR><TD ALIGN="CENTER" COLSPAN="2"><B>Ghoulflesh</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT POINT-SIZE="10"> </FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="10">&#9724;&#9724;&#9723;</FONT></TD></TR>
+    </TABLE>> URL="https://elanthipedia.play.net/Ghoulflesh"]
+    qe -- nr -- sre -- cre;
+    qe -- cfb -- rpu;
+    cfb -- cfw;
+    cfb -- ghoulflesh;
+  }
+      subgraph cluster_6 {
+    peripheries=1
+    // label=" "
+    // rank="sink";
+    node [fixedsize=true height=.5 width=1.6 group=right]
+    animation [label = <Animation> URL="https://elanthipedia.play.net/Category:Animation_spellbook" color=yellow;]
+    corruption [label = <Corruption> URL="https://elanthipedia.play.net/Category:Corruption_spellbook" color=grey]
+    bloodmagic [label = <Blood<BR/>Magic> URL="https://elanthipedia.play.net/Category:Blood_Magic_spellbook" color="red"]
+    transnecro [label = <Transcendental<BR/>Necromancy> URL="https://elanthipedia.play.net/Category:Transcendental_Necromancy_spellbook" color=pink]
+    syntheticcreation [label = <Synthetic<BR/>Creation> URL="https://elanthipedia.play.net/Category:Synthetic_Creation_spellbook" color=cyan]
+    anabasis [label = <Anabasis> URL="https://elanthipedia.play.net/Category:Anabasis_spellbook" color="#3386ff";]
+    edge [style=invis constraint=false]
+    bloodmagic -- transnecro -- syntheticcreation -- anabasis
+    bloodmagic -- corruption -- animation
+
+    }
+
+    obf -- ivm [style=dashed];
+    acs -- ivm [style=dashed];
+    hp -- ivm [style=dashed];
+    blb -- ebots;
+    vod -- cfw;
+    vivi -- cfw;
+    edge [style=invis constraint=true]
+    resection -- syntheticcreation
+
+
+}
