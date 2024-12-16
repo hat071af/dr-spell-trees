@@ -29,7 +29,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="8By_QkY793YM4N230Kt9-1" value="Obfuscation" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#CCCCCC;fontColor=#000000;fontStyle=0;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-1060" y="-2462" width="120" height="60" as="geometry" />
+          <mxGeometry x="-1060" y="-2460" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8By_QkY793YM4N230Kt9-2" value="Petrifying Visions" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#CCCCCC;fontColor=#000000;fontStyle=0;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="-901" y="-2380" width="120" height="60" as="geometry" />
